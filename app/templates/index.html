@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/style.css') }}" />
+  </head>
+  <body>
+    <h1>Abalone's Age Prediction App</h1>
+    <p>Please fill in all of the Abalone's physical features measurements below & press the predict button:</p>
+
+    <div class="form-container">
+      <form action="/predict" method="post">
+        <label for="length">Length / Longest shell measurement (in milimeter / mm) :</label>
+        <input type="number" min="0.0001" max="2" step="0.0001" name="length" id="length" placeholder="ex: 0.455" required /> <br />
+        <br />
+
+        <label for="diameter">Diameter / perpendicular to length (in milimeter / mm) :</label>
+        <input type="number" min="0.0001" max="2" step="0.0001" name="diameter" id="diameter" placeholder="ex: 0.365" required /> <br />
+        <br />
+
+        <label for="height">Height / with meat in shell (in milimeter / mm) :</label>
+        <input type="number" min="0.0001" max="2" step="0.0001" name="height" id="height" placeholder="ex: 0.095" required /> <br />
+        <br />
+
+        <label for="whole_weight">Whole Weight/ whole abalone (in grams / g) :</label>
+        <input type="number" min="0.0001" max="2" step="0.0001" name="whole_weight" id="whole_weight" placeholder="ex: 0.5140" required /> <br />
+        <br />
+
+        <label for="shucked_weight">Shucked weight / weight of meat (in grams / g) :</label>
+        <input type="number" min="0.0001" max="2" step="0.0001" name="shucked_weight" id="shucked_weight" placeholder="ex: 0.2245" required /> <br />
+        <br />
+
+        <label for="viscera_weight">Viscera weight / gut weight (after bleeding) (in grams / g):</label>
+        <input type="number" min="0.0001" max="2" step="0.0001" name="viscera_weight" id="viscera_weight" placeholder="ex: 0.1010" required /> <br />
+        <br />
+
+        <label for="shell_weight">Shell weight / after being dried (in grams / g) :</label>
+        <input type="number" min="0.0001" max="2" step="0.0001" name="shell_weight" id="shell_weight" placeholder="ex: 0.15" required /> <br />
+
+        <br />
+        <button type="submit">Predict Abalone's Age</button>
+      </form>
+    </div>
+  </body>
+</html>
